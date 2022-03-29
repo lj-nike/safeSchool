@@ -65,6 +65,8 @@
 
 <script>
 import { config7, config3, config6, config2 } from "./config";
+
+// 新增内容
 export default {
   data() {
     return {

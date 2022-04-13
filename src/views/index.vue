@@ -41,15 +41,15 @@
   </el-container>
 </template>
 <script>
-import menuitem from "../assets/menuitem.js";
+import menuitem from "../assets/menuitem.js"
 export default {
   data() {
-    const item = menuitem;
+    const item = menuitem
     return {
       tableData: item,
-    };
+    }
   },
-};
+}
 </script>
 <style>
 .aside {

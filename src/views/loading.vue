@@ -8,10 +8,10 @@
 export default {
   mounted() {
     setTimeout(() => {
-      this.$router.replace("/index");
-    }, 3000);
+      this.$router.replace("/index")
+    }, 3000)
   },
-};
+}
 </script>
 
 <style scoped>

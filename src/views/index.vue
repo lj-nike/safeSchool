@@ -1,115 +1,67 @@
 <template>
-  <div class="container">
-    <div class="login-wrapper">
-      <div class="header">校园巡检系统</div>
-      <div class="form-wrapper">
-        <input
-          type="text"
-          name="username"
-          v-model="username"
-          placeholder="账号"
-          class="input-item"
-        />
-        <input
-          type="password"
-          name="password"
-          v-model="password"
-          placeholder="密码"
-          class="input-item"
-          @keyup.enter="jude"
-        />
-        <!-- <input class="btn" type="button" @click="jude" @keyup.enter="jude" /> -->
-        <div class="btn" @click="jude" @keydown="jude">登陆</div>
+  <el-container style="height: 100%">
+    <el-header style="text-align: right">
+      <h2 style="float: left">校园巡检系统</h2>
+      <el-dropdown>
+        <i class="el-icon-setting" style="margin-right: 15px"></i>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item>查看</el-dropdown-item>
+          <el-dropdown-item>新增</el-dropdown-item>
+          <el-dropdown-item>删除</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+      <span>王小虎</span>
+    </el-header>
+    <el-container style="height: 100%">
+      <div class="aside">
+        <el-aside
+          width="200px"
+          style="
+            background-color: rgb(238, 241, 246);
+            height: 100%;
+            text-align: left;
+          "
+        >
+          <el-menu default-active="1" router>
+            <el-menu-item
+              v-for="(item, index) in tableData"
+              :key="index"
+              :index="item.url"
+            >
+              <i class="el-icon-menu"></i>
+              <span slot="title">{{ item.title }}</span>
+            </el-menu-item>
+          </el-menu>
+        </el-aside>
       </div>
-      <div class="msg">
-        有账户吗?
-        <a href="/sign">注册</a>
-      </div>
-    </div>
-  </div>
+      <el-main>
+        <router-view />
+      </el-main>
+    </el-container>
+  </el-container>
 </template>
-
 <script>
+import menuitem from "../assets/menuitem.js";
 export default {
   data() {
+    const item = menuitem;
     return {
-      username: "",
-      password: "",
+      tableData: item,
     };
   },
-  methods: {
-    jude() {
-      if (this.username === "liaojie" && this.password === "1234") {
-        this.$router.push({ path: "Dashborad" });
-      } else {
-        alert("账号密码错误");
-      }
-    },
-  },
-  mounted() {},
-  created() {},
 };
 </script>
-
-<style scoped>
-.container {
-  width: 100%;
+<style>
+.aside {
   height: 100%;
-  background-image: linear-gradient(to right, #74ebd5, #acb6e5);
 }
-.login-wrapper {
-  background-color: #fff;
-  backdrop-filter: blur(20px);
-  width: 358px;
-  height: 588px;
-  border-radius: 15px;
-  padding: 0 50px;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+.el-header {
+  background-color: #b3c0d1;
+  color: #333;
+  line-height: 60px;
 }
-/* .login-wrapper:before {
-  content: “ ”;
-  background: inherit;
-  box-shadow: inset 0 0 0 3000px rgba(255, 255, 255, 0.3);
-  filter: blur(10px);
-} */
-.header {
-  font-size: 38px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 200px;
-}
-.input-item {
-  display: block;
-  width: 100%;
-  margin-bottom: 20px;
-  border: 0;
-  padding: 10px;
-  border-bottom: 1px solid rgb(128, 125, 125);
-  font-size: 15px;
-  outline: none;
-}
-.input-item:placeholder {
-  text-transform: uppercase;
-}
-.btn {
-  text-align: center;
-  padding: 10px;
-  width: 100%;
-  margin-top: 40px;
-  background-image: linear-gradient(to right, #acb6e5, #74ebd5);
-  color: #fff;
-  border-radius: 15px;
-  cursor: pointer;
-}
-.msg {
-  text-align: center;
-  line-height: 88px;
-}
-a {
-  text-decoration-line: none;
-  color: #abc1ee;
+
+.el-aside {
+  color: #333;
 }
 </style>

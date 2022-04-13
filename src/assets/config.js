@@ -57,7 +57,6 @@ const config5 = {
       name: "郑州",
       coordinate: [0.48, 0.35],
       icon: {
-        src: require("@/assets/mapCenterPoint.png"),
         width: 30,
         height: 30,
       },
@@ -206,12 +205,10 @@ const config5 = {
   ],
   icon: {
     show: true,
-    src: require("@/assets/mapPoint.png"),
   },
   text: {
     show: true,
   },
-  bgImgSrc: require("@/assets/map.jpg"),
 };
 
 const config6 = {
@@ -244,15 +241,6 @@ const config6 = {
       name: "漯河",
       value: 15,
     },
-  ],
-  img: [
-    require("@/assets/mapPoint.png"),
-    require("@/assets/mapPoint.png"),
-    require("@/assets/mapPoint.png"),
-    require("@/assets/mapPoint.png"),
-    require("@/assets/mapPoint.png"),
-    require("@/assets/mapPoint.png"),
-    require("@/assets/mapPoint.png"),
   ],
   showValue: true,
 };

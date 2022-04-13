@@ -67,7 +67,7 @@ import {
   config5,
   config6,
   config7,
-} from "./config.js";
+} from "../assets/config.js";
 export default {
   name: "test1",
   data: function () {

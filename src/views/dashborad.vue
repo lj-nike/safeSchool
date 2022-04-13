@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { config7, config3, config6, config2 } from "./config";
+import { config7, config3, config6, config2 } from "../assets/config.js";
 
 // 新增内容 新增内容
 export default {

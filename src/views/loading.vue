@@ -8,7 +8,7 @@
 export default {
   mounted() {
     setTimeout(() => {
-      this.$router.push({ path: "about" });
+      this.$router.replace("/index");
     }, 3000);
   },
 };

@@ -11,15 +11,21 @@ const routes = [
     component: () => import("../views/loading.vue"),
   },
   {
-    path: "/about",
-    name: "About",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/index.vue"),
+    path: "/index",
+    name: "index",
+    component: () => import("../views/index.vue"),
+    children: [
+      {
+        path: "/search",
+        name: "search",
+        component: () => import("../views/components/search.vue"),
+      },
+    ],
   },
   {
-    path: "/sign",
-    name: "Sign",
-    component: () => import("../views/sign.vue"),
+    path: "/login",
+    name: "login",
+    component: () => import("../views/login.vue"),
   },
   {
     path: "/dashborad",

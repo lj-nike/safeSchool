@@ -1,4 +1,7 @@
 {
-  "singleQuete": true,
-  "semi": false
+  "printWidth": 800,
+  "singleQuote": true, 
+  "semi": false, 
+  "trailingComma": "none"  
 }
+

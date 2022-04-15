@@ -1,7 +1,7 @@
 <template>
   <el-container style="height: 100%">
     <el-header style="text-align: right">
-      <h2 style="float: left">校园巡检系统</h2>
+      <h2 style="float: left" @click="getSuccess">校园巡检系统</h2>
       <el-dropdown>
         <i class="el-icon-setting" style="margin-right: 15px"></i>
         <el-dropdown-menu slot="dropdown">
@@ -41,6 +41,7 @@
   </el-container>
 </template>
 <script>
+import axios from "axios"
 import menuitem from "../assets/menuitem.js"
 export default {
   data() {
@@ -48,6 +49,12 @@ export default {
     return {
       tableData: item,
     }
+  },
+  methods: {
+    async getSuccess() {
+      const res = await axios.get("/user")
+      console.log(res)
+    },
   },
 }
 </script>

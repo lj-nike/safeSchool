@@ -35,20 +35,20 @@ export default {
     return {
       username: "",
       password: "",
-    };
+    }
   },
   methods: {
     jude() {
       if (this.username === "liaojie" && this.password === "1234") {
-        this.$router.push({ path: "Dashborad" });
+        this.$router.push({ path: "Dashborad" })
       } else {
-        alert("账号密码错误");
+        alert("账号密码错误")
       }
     },
   },
   mounted() {},
   created() {},
-};
+}
 </script>
 
 <style scoped>

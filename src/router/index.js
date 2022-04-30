@@ -8,7 +8,7 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('../views/loading.vue')
+    component: () => import('../views/login.vue')
   },
   {
     path: '/index',
@@ -19,6 +19,11 @@ const routes = [
         path: '/search',
         name: 'search',
         component: () => import('../views/components/search.vue')
+      },
+      {
+        path: '/dashborad',
+        name: 'dashborad',
+        component: () => import('../views/dashborad.vue')
       }
     ]
   },

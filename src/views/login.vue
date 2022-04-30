@@ -3,21 +3,8 @@
     <div class="login-wrapper">
       <div class="header">校园巡检系统</div>
       <div class="form-wrapper">
-        <input
-          type="text"
-          name="username"
-          v-model="username"
-          placeholder="账号"
-          class="input-item"
-        />
-        <input
-          type="password"
-          name="password"
-          v-model="password"
-          placeholder="密码"
-          class="input-item"
-          @keyup.enter="jude"
-        />
+        <input type="text" name="username" v-model="username" placeholder="账号" class="input-item" />
+        <input type="password" name="password" v-model="password" placeholder="密码" class="input-item" @keyup.enter="jude" />
         <!-- <input class="btn" type="button" @click="jude" @keyup.enter="jude" /> -->
         <div class="btn" @click="jude" @keydown="jude">登陆</div>
       </div>
@@ -33,21 +20,21 @@
 export default {
   data() {
     return {
-      username: "",
-      password: "",
+      username: '',
+      password: ''
     }
   },
   methods: {
     jude() {
-      if (this.username === "liaojie" && this.password === "1234") {
-        this.$router.push({ path: "Dashborad" })
+      if (this.username === 'liaojie' && this.password === '1234') {
+        this.$router.push({ path: 'index' })
       } else {
-        alert("账号密码错误")
+        alert('账号密码错误')
       }
-    },
+    }
   },
   mounted() {},
-  created() {},
+  created() {}
 }
 </script>
 

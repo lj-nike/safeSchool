@@ -29,7 +29,7 @@ let menuitem = [
   },
   {
     title: '终端管理',
-    url: 'terminalManagement'
+    url: '/terminalManagement'
   }
 ]
 

@@ -42,7 +42,7 @@ export default {
 .container {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, #74ebd5, #acb6e5);
+  background-image: linear-gradient(to right, #373b44, #4286f4);
 }
 .login-wrapper {
   background-color: #fff;

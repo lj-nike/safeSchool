@@ -1,5 +1,9 @@
 let menuitem = [
   {
+    title: '数据统计分析',
+    url: '/dataAnalyse'
+  },
+  {
     title: '巡检排班',
     url: '/schedule'
   },
@@ -7,10 +11,7 @@ let menuitem = [
     title: '隐患处理分析',
     url: '/dangerAnalyse'
   },
-  {
-    title: '数据统计分析',
-    url: '/dataAnalyse'
-  },
+
   {
     title: '巡检可视化',
     url: '/dashborad'

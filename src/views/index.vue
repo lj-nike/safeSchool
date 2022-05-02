@@ -1,6 +1,6 @@
 <template>
   <el-container style="height: 100%">
-    <el-header style="text-align: right">
+    <el-header style="text-align: right" class="index-el-header">
       <h2 style="float: left" @click="getSuccess">校园巡检系统</h2>
       <el-dropdown>
         <i class="el-icon-setting" style="margin-right: 15px"></i>
@@ -51,7 +51,7 @@ export default {
 .aside {
   height: 100%;
 }
-.el-header {
+.index-el-header {
   background-color: #373b44;
   color: #fff;
   line-height: 60px;

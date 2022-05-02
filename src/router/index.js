@@ -13,6 +13,7 @@ const routes = [
   {
     path: '/index',
     name: 'index',
+    redirect: '/dataAnalyse',
     component: () => import('../views/index.vue'),
     children: [
       {
